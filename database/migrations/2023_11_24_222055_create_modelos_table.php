@@ -23,7 +23,7 @@ return new class extends Migration
             $table->foreign('moto_id')
                 ->references('id')
                 ->on('motos')
-                ->onDelete('cascade'); // Esto significa que si la moto asociada se elimina, también se eliminarán los modelos asociados
+                ->onDelete('cascade'); 
         });
     }
 
