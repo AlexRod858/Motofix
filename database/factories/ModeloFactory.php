@@ -21,7 +21,7 @@ class ModeloFactory extends Factory
         return [
             //
             'nombre_modelo' => $this->faker->companySuffix(),            
-            'id_user' => $this->faker->randomElement($motosIds), // Asignar aleatoriamente un ID de usuario existente
+            'moto_id' => $this->faker->randomElement($motosIds), // Asignar aleatoriamente un ID de usuario existente
         ];
     }
 }

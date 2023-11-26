@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use Illuminate\Support\Facades\DB;
+use App\Models\Moto;
 
 class MotoSeeder extends Seeder
 {
@@ -15,12 +16,6 @@ class MotoSeeder extends Seeder
     public function run(): void
     {
         //
-        $faker = Faker::create();
-
-        foreach (range(1, 10) as $index) {
-            DB::table('motos')->insert([
-                'nombre' => $faker->company(),
-            ]);
-        }
+        Moto::factory()->count(50)->create();
     }
 }
