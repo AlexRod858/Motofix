@@ -15,7 +15,11 @@ class SolucionSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-        Solucion::factory()->count(50)->create();
+        try {
+            Solucion::factory()->count(50)->create();
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
     }
+    
 }
