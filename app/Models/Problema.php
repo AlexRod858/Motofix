@@ -12,4 +12,11 @@ class Problema extends Model
     protected $fillable = [
         'descripcion',
     ];
+
+
+    public function soluciones()
+    {
+        return $this->hasMany(Solucion::class);
+    }
+
 }

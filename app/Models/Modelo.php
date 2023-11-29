@@ -12,4 +12,9 @@ class Modelo extends Model
     protected $fillable = [
         'nombre_modelo',
     ];
+
+    public function problemas()
+    {
+        return $this->hasMany(Problema::class);
+    }
 }

@@ -12,4 +12,9 @@ class Moto extends Model
     protected $fillable = [
         'nombre',
     ];
+
+    public function modelos()
+    {
+        return $this->hasMany(Modelo::class);
+    }
 }

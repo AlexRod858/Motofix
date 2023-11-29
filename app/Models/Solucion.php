@@ -12,4 +12,5 @@ class Solucion extends Model
     protected $fillable = [
         'solucion',
     ];
+    
 }
